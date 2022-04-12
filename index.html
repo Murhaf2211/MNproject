@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,21 +21,45 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaQueries.css" />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
 
-    <title>M&Nfood</title>
+    <title>M&Nfood &mdash; Never cook again</title>
   </head>
   <body>
     <header class="header">
-      <img class="logo" alt="M&NFood logo " src="img/Mnfood-logo.png" />
+      <a href="#">
+        <img class="logo" alt="M&NFood logo " src="img/Mnfood-logo.png" />
+      </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">section1</a></li>
-          <li><a class="main-nav-link" href="#">section1</a></li>
-          <li><a class="main-nav-link" href="#">section1</a></li>
-          <li><a class="main-nav-link" href="#">section1</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">section1</a></li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-link" href="#test">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#price">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon
+          class="icon-mobile-nav md hydrated"
+          name="menu-outline"
+          role="img"
+          aria-label="menu outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon-mobile-nav md hydrated"
+          name="close-outline"
+          role="img"
+          aria-label="close outline"
+        ></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -42,10 +74,10 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--full margin-right-sm"
+            <a href="#cta" class="btn btn--full margin-right-sm"
               >Start eating well</a
             >
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
             <div class="delivered-meals">
               <div class="delevered-imgs">
                 <img src="img/customer-1.jpg" alt="Customer photo" />
@@ -86,7 +118,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">HOW IT WORKS</span>
           <h2 class="heading-secondary">
@@ -152,7 +184,7 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container text-cent">
           <span class="subheading text-cent">MEALS</span>
           <h2 class="heading-secondary">
@@ -264,7 +296,7 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="test">
         <div class="testimonial-container">
           <span class="subheading">TESTIMONIALS</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -360,7 +392,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="price">
         <div class="container">
           <span class="subheading">PRICING</span>
           <h2 class="heading-secondary">
@@ -476,7 +508,7 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" id="cta" action="#">
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
@@ -520,9 +552,98 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="M&Nfood logo" src="img/Mnfood-logo.png" />
+          </a>
 
-    <footer></footer>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon
+                  class="social-icon md hydrated"
+                  name="logo-instagram"
+                  role="img"
+                  aria-label="logo instagram"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon
+                  class="social-icon md hydrated"
+                  name="logo-facebook"
+                  role="img"
+                  aria-label="logo facebook"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon
+                  class="social-icon md hydrated"
+                  name="logo-twitter"
+                  role="img"
+                  aria-label="logo twitter"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
 
+          <p class="copyright">
+            Copyright © <span class="year">2027</span> by M&NFood, Inc. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@omnifood.com"
+                >hello@mnfood.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About M&Nfood</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Cooking partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Recipe directory </a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy &amp; terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
